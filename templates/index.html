@@ -75,7 +75,27 @@
    </ul>
    
    <h2>Vega-lite Chart</h2>
-   
+   <img></img>
+<!-- Vega-lite graphing code. -->
+   <script>
+	  // Assign the specification to a local variable vlSpec.
+	  var vlSpec = {
+	    
+	  };
+	
+	  var embedSpec = {
+	    mode: "vega",  // Instruct Vega-Embed to use the Vega-Lite compiler
+	    spec: vlSpec
+	    // You can add more vega-embed configuration properties here.
+	    // See https://github.com/vega/vega/wiki/Embed-Vega-Web-Components#configuration-propeties for more information.
+	  };
+	
+	  // Embed the visualization in the container with id `vis`
+	  vg.embed("#vis", embedSpec, function(error, result) {
+	    // Callback receiving the View instance and parsed Vega spec
+	    // result.view is the View, which resides under the '#vis' element
+	  });
+  </script>
 
 
    <div class="page-header">
